@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js"
+      }
+    }
+    </script>
+    <script src="admin.js" defer type="module"></script>
+    <title>The Puzzle Box — Admin</title>
+</head>
+<body>
+    <h1>Admin</h1>
+    <input type="text" id="MessageInput" placeholder="Content...">
+    <div id="QuickButtons">
+        <button class="quick">HINT</button>
+        <button class="quick">ERROR</button>
+        <button class="quick">CORRECT</button>
+        <button class="quick">INPUT</button>
+        <button class="quick">NOTICE</button>
+    </div>
+    <h2>Last response: <span id="ResponseLabel">...</span></h2>
+</body>
+</html>
