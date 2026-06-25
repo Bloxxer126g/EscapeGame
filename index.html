@@ -14,6 +14,30 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap" rel="stylesheet"> 
     <title>The Puzzle Box</title>
+    <style>
+        #ImageView {
+            display: none;
+            position: fixed;
+            inset: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            padding: 32px;
+        }
+        #ImageView img {
+            max-width: 300px;
+            max-height: 300px;
+            object-fit: contain;
+            cursor: pointer;
+            border: 3px solid transparent;
+            border-radius: 8px;
+            transition: border-color 0.15s;
+        }
+        #ImageView img:hover {
+            border-color: #fff;
+        }
+    </style>
 </head>
 <body>
     <div id="WaitingView">
@@ -21,11 +45,13 @@
     </div>
 
     <div id="ResponseView" style="display:none; position:fixed; inset:0; flex-direction:column; justify-content:center; align-items:center;">
-        <h2><span id="PopupAction"></span></h2>
+        <h2 class="Text"><span class="Text" id="PopupAction"></span></h2>
         <p id="PopupContent"></p>
-        <input id="ResponseInput" type="text">
+        <input class="Text" id="ResponseInput" type="text">
         <br>
-        <button id="ResponseSend">Send</button>
+        <button class="Text" id="ResponseSend">Send</button>
     </div>
+
+    <div id="ImageView"></div>
 </body>
 </html>
